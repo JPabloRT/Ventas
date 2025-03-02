@@ -156,6 +156,9 @@ const App: React.FC = () => {
       producto.total.toFixed(2),
     ]);
 
+    // Agregar la fila del total general
+    rows.push(['', '', '', 'Total General:', total.toFixed(2)]);
+
     // Crear el contenido CSV como un array de strings
     const csvContent = [
       ...header,
@@ -230,6 +233,16 @@ const App: React.FC = () => {
                   <td>${producto.total.toFixed(2)}</td>
                 </tr>
               ))}
+              {/* Fila adicional para el total general */}
+              <tr>
+                <td
+                  colSpan={4}
+                  style={{ textAlign: 'right', fontWeight: 'bold' }}
+                >
+                  Total General:
+                </td>
+                <td style={{ fontWeight: 'bold' }}>${total.toFixed(2)}</td>
+              </tr>
             </tbody>
           </table>
           <button onClick={exportarCSV}>Descargar CSV</button>
