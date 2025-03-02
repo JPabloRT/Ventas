@@ -12,15 +12,14 @@ body {
 .app {
   max-width: 1000px;
   margin: 0 auto;
-  background: rgb(219, 236, 249); /* Fondo blanco para la app */
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   background: linear-gradient(
     135deg,
     #ffffff,
     #f2f2f2
   ); /* Degradado más suave y amigable para la app */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid #ddd; /* Bordes suaves */
 }
 
@@ -154,4 +153,64 @@ table td {
 table td,
 table th {
   border-radius: 8px;
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .app {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .familia h2 {
+    font-size: 1.2em;
+  }
+
+  .producto {
+    grid-template-columns: 1fr; /* Cambiamos a una sola columna en móviles */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .producto input {
+    width: 100%; /* El input ocupa todo el ancho */
+    margin-left: 0;
+  }
+
+  .total {
+    text-align: center; /* Centramos el total en móviles */
+    font-size: 1.2em;
+  }
+
+  .botones {
+    flex-direction: column; /* Apilamos los botones verticalmente */
+    gap: 10px;
+  }
+
+  button {
+    width: 100%; /* Los botones ocupan todo el ancho */
+  }
+
+  table th,
+  table td {
+    padding: 8px; /* Reducimos el padding en móviles */
+    font-size: 0.9em; /* Reducimos el tamaño de la fuente */
+  }
+
+  .tabla {
+    overflow-x: auto; /* Permitimos desplazamiento horizontal en la tabla */
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  }
 }
