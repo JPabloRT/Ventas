@@ -1,0 +1,157 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    #f8c8dc,
+    #f4f7fb
+  ); /* Fondo degradado suave */
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgb(219, 236, 249); /* Fondo blanco para la app */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f2f2f2
+  ); /* Degradado más suave y amigable para la app */
+  border: 1px solid #ddd; /* Bordes suaves */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.familia {
+  margin-bottom: 40px;
+}
+
+.familia h2 {
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  color: #007bff;
+}
+
+.producto-lista {
+  margin-left: 20px;
+}
+
+.producto {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr; /* Mejor distribución */
+  gap: 15px;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.producto span {
+  display: block;
+  padding: 0 12px;
+  color: #333;
+}
+
+.producto input {
+  width: 80px;
+  text-align: center;
+  padding: 8px;
+  font-size: 1.1em;
+  margin-left: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: border 0.3s ease;
+}
+
+.producto input:focus {
+  outline: none;
+  border: 2px solid #007bff;
+}
+
+.total {
+  text-align: right;
+  margin-top: 30px;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+button {
+  padding: 14px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 48%; /* Ajustamos el tamaño de los botones */
+  transition: background-color 0.3s ease, transform 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.tabla {
+  margin-top: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  color: #555;
+}
+
+table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #007bff;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+table td {
+  font-size: 1.1em;
+}
+
+table td,
+table th {
+  border-radius: 8px;
+}
