@@ -136,16 +136,6 @@ const App: React.FC = () => {
   };
 
   const exportarCSV = () => {
-    const header = [
-      'CONCEPTOS EMPRESARIALES DE DESARROLLO S.A. DE C.V',
-      'NOTA DE VENTA',
-      'TEL. 55 5865-1617',
-      '01800 714 8399 01800 696 4416 01800 822 8350',
-      '',
-      `ID de Venta: ${ventaID}`,
-      '',
-    ];
-
     const columns = ['Familia', 'Producto', 'Cantidad', 'Precio', 'Total'];
 
     const rows = productosSeleccionados.map((producto) => [
@@ -161,7 +151,6 @@ const App: React.FC = () => {
 
     // Crear el contenido CSV como un array de strings
     const csvContent = [
-      ...header,
       columns.join(','),
       ...rows.map((row) => row.join(',')),
     ].join('\n');
@@ -245,7 +234,7 @@ const App: React.FC = () => {
               </tr>
             </tbody>
           </table>
-          <button onClick={exportarCSV}>Descargar CSV</button>
+          <button onClick={exportarCSV}>Descargar Tabla</button>
         </div>
       )}
     </div>
@@ -253,3 +242,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+
